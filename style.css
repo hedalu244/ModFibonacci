@@ -5,14 +5,19 @@ body{
 
 #header{
   margin: 0 0 20px;
-  padding: 10px 20% 10px;
+  padding: 10px 80px 10px;
   background-color: #fff;
-  
-  height:80px;
+  position: relative;
+  height:160px;
 
   box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
 }
 
+#search_wrapper{
+  position: absolute;
+  top: 30px;
+  right: 80px;
+}
 #search_error{
   color: red;
   font-size: 0.8em;
@@ -60,11 +65,10 @@ body{
   overflow-x: scroll;
 }
 
-a{ color: #0645ad; text-decoration:none;}
+a{ color: #0645ad; text-decoration:none; border-bottom: 1px dashed; }
 a:visited{ color: #0b0080; }
 a:hover{ color: #06e; }
 a:active{ color:#faa700; }
-a:focus{ outline: thin dotted; }
 a:hover, a:active{ outline: 0; }
 
 p{margin:1em 0;}
