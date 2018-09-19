@@ -78,13 +78,13 @@ function visualize(result) {
   unit.appendChild(tmp);
   
   tmp = document.createElement('h3');
-  tmp.textContent = '出現率の分布(未ソート)';
+  tmp.textContent = '出現回数の分布(未ソート)';
   unit.appendChild(tmp);
   tmp = document.createElement('canvas');
   var lavels = new Array(result.mod);
   for(var i=0; i<result.mod; i++) lavels[i]=""+i;
   var data = new Array(result.mod);
-  for(var i=0; i<result.mod; i++) data[i] = result.freq[i] / result.length;
+  for(var i=0; i<result.mod; i++) data[i] = result.freq[i];
   new Chart(tmp, {
       type: 'bar',
       data: {
@@ -113,13 +113,13 @@ function visualize(result) {
   unit.appendChild(tmp);
 
   tmp = document.createElement('h3');
-  tmp.textContent = '出現率の分布(ソート済み)';
+  tmp.textContent = '出現回数の分布(ソート済み)';
   unit.appendChild(tmp);
   tmp = document.createElement('canvas');
   var lavels = new Array(result.mod);
-  for(var i=0; i<result.mod; i++) lavels[i]=""+i;
+  for(var i=0; i<result.mod; i++) lavels[i]="";
   var data = new Array(result.mod);
-  for(var i=0; i<result.mod; i++) data[i] = result.freq[i] / result.length;
+  for(var i=0; i<result.mod; i++) data[i] = result.freq[i];
   lavels.sort(function(a,b){
         if(data[a] > data[b]) return -1;
         if(data[a] < data[b]) return 1;
